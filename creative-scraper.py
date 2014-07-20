@@ -3,7 +3,7 @@ import requests
 
 
 def getQueryString(personInfo, queryTemplate, attr, idx) :
-    return personInfo.replace("<id>", str(idx)) + queryTemplate.replace("<attr>", attr)
+    return personInfo.replace("<id>", str(idx + 1)) + queryTemplate.replace("<attr>", attr)
 
 def doScrape() :
     page = requests.get("https://podio.com/site/creative-routines")
@@ -16,12 +16,15 @@ def doScrape() :
     namesLength = len(names)
 
     for idx in range(namesLength):
-        sleepStyles = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
-        workStyles = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
-        leasureStyles = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
-        exerciseStyles = tree.xpath(getQueryString(personInfo, queryTemplate, "exercise", idx))
-
-        print names[idx]
+        sleep = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
+        sleepStyles = (names[idx], sleep)
+        work = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
+        workStyles = (names[idx], work)
+        leasure = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
+        leasureStyles = (names[idx], leasure)
+        exercise = tree.xpath(getQueryString(personInfo, queryTemplate, "exercise", idx))
+        exerciseStyles = (names[idx], exercise)
+        
         print sleepStyles
 
 doScrape()
