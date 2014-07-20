@@ -1,9 +1,13 @@
 from lxml import html
 import requests
+import re
 
 
 def getQueryString(personInfo, queryTemplate, attr, idx) :
     return personInfo.replace("<id>", str(idx + 1)) + queryTemplate.replace("<attr>", attr)
+
+def getHoursForActivity(activity) :
+    return re.search('(?<=width: )\w+', activity)
 
 def doScrape() :
     page = requests.get("https://podio.com/site/creative-routines")
@@ -17,7 +21,7 @@ def doScrape() :
 
     for idx in range(namesLength):
         sleep = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
-        sleepStyles = (names[idx], sleep)
+        sleepStyles = (names[idx], getHoursForActivity(sleep))
         work = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
         workStyles = (names[idx], work)
         leasure = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
