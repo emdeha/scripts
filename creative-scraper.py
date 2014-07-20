@@ -4,12 +4,21 @@ import requests
 page = requests.get("https://podio.com/site/creative-routines")
 tree = html.fromstring(page.text)
 
-personInfo = '//div[@class="name"]/preceding-sibling::ul[@class="person"]'
+personInfo = '//div[@class="name"][<id>]/preceding-sibling::ul[@class="person"]'
 queryTemplate = '//li[contains(@class,"<attr>")]/@style'
 
-sleepStyles = tree.xpath(personInfo + queryTemplate.replace("<attr>","sleep"))
-workStyles = tree.xpath(personInfo + queryTemplate.replace("<attr>","creative"))
-leasureStyles = tree.xpath(personInfo + queryTemplate.replace("<attr>","food"))
-exerciseStyles = tree.xpath(personInfo + queryTemplate.replace("<attr>","exercise"))
+names = tree.xpath('//div[@class="name"]/text()')
+namesLength = len(names)
 
-print leasureStyles
+for idx in range(namesLength):
+    sleepStyles = tree.xpath(personInfo.replace("<id>",str(idx)) +
+                             queryTemplate.replace("<attr>","sleep"))
+    workStyles = tree.xpath(personInfo.replace("<id>",str(idx)) +
+                            queryTemplate.replace("<attr>","creative"))
+    leasureStyles = tree.xpath(personInfo.replace("<id>",str(idx)) +
+                               queryTemplate.replace("<attr>","food"))
+    exerciseStyles = tree.xpath(personInfo.replace("<id>",str(idx)) +
+                                queryTemplate.replace("<attr>","exercise"))
+
+    print names[idx]
+    print sleepStyles
