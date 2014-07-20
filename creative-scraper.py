@@ -6,8 +6,9 @@ import re
 def getQueryString(personInfo, queryTemplate, attr, idx) :
     return personInfo.replace("<id>", str(idx + 1)) + queryTemplate.replace("<attr>", attr)
 
-def getHoursForActivity(activity) :
-    return re.search('(?<=width: )\w+', activity)
+def getHoursForActivity(activities) :
+    for activity in activities :
+        return re.search('(?<=width: )\w+', activity).group(0)
 
 def doScrape() :
     page = requests.get("https://podio.com/site/creative-routines")
@@ -23,11 +24,11 @@ def doScrape() :
         sleep = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
         sleepStyles = (names[idx], getHoursForActivity(sleep))
         work = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
-        workStyles = (names[idx], work)
+        workStyles = (names[idx], getHoursForActivity(work))
         leasure = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
-        leasureStyles = (names[idx], leasure)
+        leasureStyles = (names[idx], getHoursForActivity(leasure))
         exercise = tree.xpath(getQueryString(personInfo, queryTemplate, "exercise", idx))
-        exerciseStyles = (names[idx], exercise)
+        exerciseStyles = (names[idx], getHoursForActivity(exercise))
         
         print sleepStyles
 
