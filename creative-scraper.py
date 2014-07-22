@@ -3,14 +3,17 @@ import requests
 import re
 
 
-def getQueryString(personInfo, queryTemplate, attr, idx) :
+def getQueryString(personInfo, queryTemplate, attr, idx):
     return personInfo.replace("<id>", str(idx + 1)) + queryTemplate.replace("<attr>", attr)
 
-def getHoursForActivity(activities) :
+def getHoursForActivity(activities):
+    hours = 0.0
     for activity in activities :
-        return re.search('(?<=width: )\w+', activity).group(0)
+        percentage = re.search('(?<=width: )\d*\.?\d*', activity).group(0)
+        hours += (float(percentage) / 100.0) * 24.0
+    return hours
 
-def doScrape() :
+def doScrape():
     page = requests.get("https://podio.com/site/creative-routines")
     tree = html.fromstring(page.text)
 
@@ -20,16 +23,31 @@ def doScrape() :
     names = tree.xpath('//div[@class="name"]/text()')
     namesLength = len(names)
 
+    sleepStyles = []
+    workStyles = []
+    leasureStyles = []
+    exerciseStyles = []
+
     for idx in range(namesLength):
         sleep = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
-        sleepStyles = (names[idx], getHoursForActivity(sleep))
+        sleepStyles.append((names[idx], getHoursForActivity(sleep)))
+
         work = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
-        workStyles = (names[idx], getHoursForActivity(work))
+        workStyles.append((names[idx], getHoursForActivity(work)))
+
         leasure = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
-        leasureStyles = (names[idx], getHoursForActivity(leasure))
+        leasureStyles.append((names[idx], getHoursForActivity(leasure)))
+
         exercise = tree.xpath(getQueryString(personInfo, queryTemplate, "exercise", idx))
-        exerciseStyles = (names[idx], getHoursForActivity(exercise))
+        exerciseStyles.append((names[idx], getHoursForActivity(exercise)))
         
-        print sleepStyles
+    print "Sleep:"
+    print sleepStyles
+    print "Work:"
+    print workStyles
+    print "Leasure:"
+    print leasureStyles
+    print "Exercise:"
+    print exerciseStyles
 
 doScrape()
