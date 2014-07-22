@@ -44,10 +44,10 @@ def doScrape():
     print "Sleep:"
     print '\n'.join(map(str, sleepStyles))
     print "Work:"
-    print workStyles
+    print '\n'.join(map(str, workStyles))
     print "Leasure:"
-    print leasureStyles
+    print '\n'.join(map(str, leasureStyles))
     print "Exercise:"
-    print exerciseStyles
+    print '\n'.join(map(str, exerciseStyles))
 
 doScrape()
