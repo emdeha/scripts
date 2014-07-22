@@ -42,7 +42,7 @@ def doScrape():
         exerciseStyles.append((names[idx], getHoursForActivity(exercise)))
         
     print "Sleep:"
-    print sleepStyles
+    print '\n'.join(map(str, sleepStyles))
     print "Work:"
     print workStyles
     print "Leasure:"
