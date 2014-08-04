@@ -1,0 +1,137 @@
+Honore de Balzac - 51, health problems, medium legacy; inflenced lots of people
+John Milton - 65, dies blind, medium legacy
+Haruki Murakami - 65(alive), no info (maybe good health), lots of legacy
+Voltaire - 83, drinked lot of coffee, maybe good health, lots of legacy
+Benjamin Franklin - 84, obese; hearth problems
+Immanuel Kant - 79, influencer; many major works
+Kurt Vonnegut - 84, not natural death, medium legacy
+Maya Angelou - 86, poetry, authobiographies, movies, plays, music
+Wystan Hugh Auden - 66, 400 poems, 400 essays and reviews
+Ludwig Van Beethoven - 56, loss of hearing, possible alcoholic
+Mary Flannery O'Connor - 39, autoimmune desease, small legacy
+Le Corbusier - 77, architect, writer, designer, painter, lots of legacy; dies from swimming against doctor's 
+               orders
+Victor Hugo - 83, dies from pneumonia, lots of legacy
+Wolfgang Amadeus Mozart - 35, period of depression, unknown reason for death
+Charles Darwin - 73, owerworked, periodical illness
+Charles Dickens - 58, died from stroke/overwork, medium legacy
+Sigmund Freud - 83, cancer, heavy smoking, lots of psychological legacy
+Vladimir Nabokov - 78, medium legacy, natural death
+Kingsley Amis - 73, lots of legacy
+Thomas Mann - 80, natural death, medium legacy
+Richard Strauss - 85, natural death, lots of legacy
+Pyotr Ilyich Tchaikovsky - 53, cholera, drinking
+Franz Kafka - 40, tuberculosis, little legacy
+Gustave Flaubert - 58, medium legacy
+Pablo Picasso - 91, natural death
+William Styron - 81, pneumonia, medium legacy
+
+
+Sleep:
+(u'1. Honor\xe9 de Balzac', 8.5)
+('2. John Milton', 6.999999999999999)
+('3. Haruki Murakami', 6.999999999999999)
+('4. Voltaire', 3.999999999999999)
+('5. Benjamin Franklin', 7.0)
+('6. Immanuel Kant', 7.0)
+('7. Kurt Vonnegut', 7.499999999999998)
+('8. Maya Angelou', 7.499999999999998)
+('9. Wystan Hugh Auden', 8.0)
+('10. Ludwig Van Beethoven ', 8.5)
+("11. Mary Flannery O'Connor", 9.0)
+('12. Le Corbusier', 7.0)
+('13. Victor Hugo', 8.0)
+('14. Wolfgang Amadeus Mozart', 5.000000000000001)
+('15. Charles Darwin', 8.0)
+('16. Charles Dickens', 7.0)
+('17. Sigmund Freud', 6.0)
+('18. Vladimir Nabokov ', 8.0)
+('19. Kingsley Amis', 8.0)
+('20. Thomas Mann', 8.999999999999998)
+('21. Richard Strauss', 9.999999999999998)
+('22. Pyotr Ilyich Tchaikovsky', 7.999999999999998)
+('23. Franz Kafka', 6.5)
+('24. Gustave Flaubert', 7.0)
+('25. Pablo Picasso', 8.500000000000002)
+('26. William Styron', 9.0)
+Work:
+(u'1. Honor\xe9 de Balzac', 13.0)
+('2. John Milton', 5.0)
+('3. Haruki Murakami', 7.999999999999998)
+('4. Voltaire', 15.999999999999996)
+('5. Benjamin Franklin', 7.999999999999998)
+('6. Immanuel Kant', 0.9999999999999998)
+('7. Kurt Vonnegut', 4.0)
+('8. Maya Angelou', 8.499999999999998)
+('9. Wystan Hugh Auden', 11.5)
+('10. Ludwig Van Beethoven ', 7.999999999999998)
+("11. Mary Flannery O'Connor", 3.0)
+('12. Le Corbusier', 5.499999999999999)
+('13. Victor Hugo', 6.5)
+('14. Wolfgang Amadeus Mozart', 7.999999999999998)
+('15. Charles Darwin', 5.0)
+('16. Charles Dickens', 5.000000000000001)
+('17. Sigmund Freud', 8.5)
+('18. Vladimir Nabokov ', 7.0)
+('19. Kingsley Amis', 5.5)
+('20. Thomas Mann', 6.5)
+('21. Richard Strauss', 4.0)
+('22. Pyotr Ilyich Tchaikovsky', 3.999999999999999)
+('23. Franz Kafka', 7.0)
+('24. Gustave Flaubert', 10.5)
+('25. Pablo Picasso', 10.5)
+('26. William Styron', 3.999999999999999)
+Leasure:
+(u'1. Honor\xe9 de Balzac', 2.5000000000000004)
+('2. John Milton', 8.0)
+('3. Haruki Murakami', 7.999999999999998)
+('4. Voltaire', 1.5)
+('5. Benjamin Franklin', 9.0)
+('6. Immanuel Kant', 11.0)
+('7. Kurt Vonnegut', 6.0)
+('8. Maya Angelou', 7.0)
+('9. Wystan Hugh Auden', 5.0)
+('10. Ludwig Van Beethoven ', 6.499999999999998)
+("11. Mary Flannery O'Connor", 12.0)
+('12. Le Corbusier', 8.0)
+('13. Victor Hugo', 5.499999999999998)
+('14. Wolfgang Amadeus Mozart', 5.999999999999998)
+('15. Charles Darwin', 4.499999999999999)
+('16. Charles Dickens', 8.0)
+('17. Sigmund Freud', 4.499999999999999)
+('18. Vladimir Nabokov ', 8.0)
+('19. Kingsley Amis', 10.5)
+('20. Thomas Mann', 5.5)
+('21. Richard Strauss', 7.5)
+('22. Pyotr Ilyich Tchaikovsky', 7.999999999999998)
+('23. Franz Kafka', 2.999999999999999)
+('24. Gustave Flaubert', 3.4999999999999996)
+('25. Pablo Picasso', 4.999999999999999)
+('26. William Styron', 9.5)
+Exercise:
+(u'1. Honor\xe9 de Balzac', 0.0)
+('2. John Milton', 3.0)
+('3. Haruki Murakami', 0.9999999999999998)
+('4. Voltaire', 0.0)
+('5. Benjamin Franklin', 0.0)
+('6. Immanuel Kant', 0.9999999999999998)
+('7. Kurt Vonnegut', 1.5)
+('8. Maya Angelou', 0.0)
+('9. Wystan Hugh Auden', 0.0)
+('10. Ludwig Van Beethoven ', 0.9999999999999998)
+("11. Mary Flannery O'Connor", 0.0)
+('12. Le Corbusier', 0.4999999999999999)
+('13. Victor Hugo', 1.9999999999999996)
+('14. Wolfgang Amadeus Mozart', 0.0)
+('15. Charles Darwin', 1.4999999999999996)
+('16. Charles Dickens', 3.0)
+('17. Sigmund Freud', 0.9999999999999998)
+('18. Vladimir Nabokov ', 0.9999999999999998)
+('19. Kingsley Amis', 0.0)
+('20. Thomas Mann', 0.4999999999999999)
+('21. Richard Strauss', 1.4999999999999996)
+('22. Pyotr Ilyich Tchaikovsky', 2.4999999999999996)
+('23. Franz Kafka', 1.5)
+('24. Gustave Flaubert', 0.9999999999999998)
+('25. Pablo Picasso', 0.0)
+('26. William Styron', 0.0)

@@ -30,16 +30,16 @@ def doScrape():
 
     for idx in range(namesLength):
         sleep = tree.xpath(getQueryString(personInfo, queryTemplate, "sleep", idx))
-        sleepStyles.append((names[idx], getHoursForActivity(sleep)))
+        sleepStyles.append((str(idx+1) + ". " + names[idx], getHoursForActivity(sleep)))
 
         work = tree.xpath(getQueryString(personInfo, queryTemplate, "creative", idx))
-        workStyles.append((names[idx], getHoursForActivity(work)))
+        workStyles.append((str(idx+1) + ". " + names[idx], getHoursForActivity(work)))
 
         leasure = tree.xpath(getQueryString(personInfo, queryTemplate, "food", idx))
-        leasureStyles.append((names[idx], getHoursForActivity(leasure)))
+        leasureStyles.append((str(idx+1) + ". " + names[idx], getHoursForActivity(leasure)))
 
         exercise = tree.xpath(getQueryString(personInfo, queryTemplate, "exercise", idx))
-        exerciseStyles.append((names[idx], getHoursForActivity(exercise)))
+        exerciseStyles.append((str(idx+1) + ". " + names[idx], getHoursForActivity(exercise)))
         
     print "Sleep:"
     print '\n'.join(map(str, sleepStyles))
